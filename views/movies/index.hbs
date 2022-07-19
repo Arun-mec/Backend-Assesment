@@ -1,0 +1,43 @@
+<div class="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">Navbar</a>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown" style="position: fixed; right: 25px;">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/user/login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/user/signup">Signup</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<section>
+    <div class="container">
+        <div class="row w-25 p-1 ms-auto mt-2">
+            <a href="/addmovie" class="btn btn-secondary">Add Movie</a>
+        </div>
+        <table class="table mt-3 p-5">
+            <thead>
+                <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>asda</td>
+                    <td>asda</td>
+                    <td>asda</td>
+                    <td>asdas</td>
+                    <td><a href="/editmovie/{{this._id}}" class="btn btn-primary">Edit</a></td>
+                    <td><a href="/deletemovie/{{this._id}}" class="btn btn-danger" onclick="return confirm('Do you want to delete {{this._id}}')">Delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
