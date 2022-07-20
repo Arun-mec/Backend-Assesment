@@ -10,3 +10,4 @@ db.on('error',(error)=> console.log(error));
 db.once('open', ()=>{console.log('database is connected')})
 
 require('./movie.model');
+require('./user.model')
