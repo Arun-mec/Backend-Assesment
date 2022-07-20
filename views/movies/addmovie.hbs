@@ -2,22 +2,22 @@
 <div class="container mt-3">
     <div class="row">
         <div class="col-md-6 m-auto">
-            <a href="/admin"><i class="bi bi-arrow-left-circle" style="font-size: 2rem;color:black;"></i></a>
-            <form action="/admin/add-product" method="POST" enctype="multipart/form-data">
+           
+            <form action="/addmovie" method="POST" enctype="application/x-www-form-urlencoded">
                 <legend class="text-center">Add a new movie?</legend>
                 <label for="">Movie name</label>
-                    <input type="text" class="form-control" name="name" id="Name" placeholder="Name">
+                    <input type="text" class="form-control" name="name" id="Name" placeholder="Name" required>
                 <label for="">Rating</label>
-                    <input type="number" class="form-control" name="rating" id="rating" placeholder="Rating out of 10">
+                    <input type="number" class="form-control" name="rating" id="rating" placeholder="Rating out of 10" required>
                 <label for="">Cast</label>
-                    <input type="text" class="form-control" name="cast" id="cast" placeholder="Cast">
+                    <input type="text" class="form-control" name="cast" id="cast" placeholder="Cast" required>
                 <label for="">Genre</label>
-                    <input type="text" class="form-control" name="genre" id="genre" placeholder="Genre">
+                    <input type="text" class="form-control" name="genre" id="genre" placeholder="Genre" required>
                 <label for="">Release Date</label>
-                    <input type="date" class="form-control" name="date" id="date" placeholder="Genre">
+                    <input type="date" class="form-control" name="date" id="date" placeholder="Genre" required>
                 
 
-                <button type="submit" class="btn btn-secondary " style="float: right;margin-top:2rem"">Submit</button>
+                <button type="submit" class="btn btn-secondary " style="float: right;margin-top:2rem">Submit</button>
                 </div>
             </form>
         </div>

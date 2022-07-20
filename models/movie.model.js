@@ -1,22 +1,22 @@
 const mongoose = require('mongoose');
 
 var movieSchema = new mongoose.Schema({
-    MovieName: {
+    moviename: {
         type: String,
         required: true
     },
-    Rating: {
+    rating: {
         type: Number,
         required: true
     },
-    Cast: {
+    cast: {
         type: Array
     },
-    Genre: {
+    genre: {
         type: String
     },
-    ReleaseDate: {
-        type: Date,
+    releasedate: {
+        type: String,
         required: true
     }
 });

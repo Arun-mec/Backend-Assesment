@@ -1,0 +1,23 @@
+<section>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-6 m-auto">
+            <form action="/updatemovie/{{movie._id}}" method="POST" enctype="application/x-www-form-urlencoded">
+                <legend class="text-center">Update a movie?</legend>
+                <label for="">Movie name</label>
+                    <input type="text" class="form-control" name="name" id="Name" value={{movie.moviename}} required>
+                <label for="">Rating</label>
+                    <input type="number" class="form-control" name="rating" id="rating" value={{movie.rating}} required>
+                <label for="">Cast</label>
+                    <input type="text" class="form-control" name="cast" id="cast" value={{movie.cast}} required>
+                <label for="">Genre</label>
+                    <input type="text" class="form-control" name="genre" id="genre" value={{movie.genre}} required>
+                <label for="">Release Date</label>
+                    <input type="date" class="form-control" name="date" id="date" value={{movie.releasedate}} required>
+                <button type="submit" class="btn btn-secondary " style="float: right;margin-top:2rem">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</section>
