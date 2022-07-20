@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const router = express.Router();
 const Movie = mongoose.model('Movie')
 
+//landing page
 router.get('/', (req,res)=>{
     let user = req.session.user;
     Movie.find().lean().exec((err,done)=>{
@@ -13,6 +14,8 @@ router.get('/', (req,res)=>{
         }
     })
 })
+
+//movies can be added to the list of movies
 router.get('/addmovie', (req,res)=>{
     if (req.session.user){
         res.render('./movies/addmovie');
@@ -20,8 +23,8 @@ router.get('/addmovie', (req,res)=>{
         res.redirect('/user/login')
     }
 })
+
 router.post('/addmovie', (req,res)=>{
-    
     var movie = new Movie()
     movie.moviename = req.body.name,
     movie.rating = req.body.rating,
@@ -36,6 +39,8 @@ router.post('/addmovie', (req,res)=>{
         }
     })
 })
+
+//Details of the movie of which the details to be updated
 router.get('/updatemovie/:id', (req,res)=>{
     if (req.session.user){
         Movie.findById(req.params.id).lean().exec((err,done)=>{
@@ -50,6 +55,8 @@ router.get('/updatemovie/:id', (req,res)=>{
         res.redirect('/user/login')
     }
 })
+
+//updation of details of movie
 router.post('/updatemovie/:id',(req,res)=>{
     if (req.session.user){
         Movie.findOneAndUpdate({ _id: req.params.id },{
@@ -69,6 +76,8 @@ router.post('/updatemovie/:id',(req,res)=>{
         res.redirect('/user/login')
     }
 })
+
+//Deletion of movie 
 router.get('/delete/:id',(req,res)=>{
     if (req.session.user){
         Movie.findOneAndDelete({ _id: req.params.id },(err,done)=>{
